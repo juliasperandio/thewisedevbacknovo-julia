@@ -20,6 +20,9 @@ export class Course {
   }
 
   move (module: Module, to: number): void {
+    if (to > this.modules.length || to <= 0) {
+      return
+    }
     const from = this.position(module)
     moveInArray(this.modules, from - 1, to - 1)
   }
