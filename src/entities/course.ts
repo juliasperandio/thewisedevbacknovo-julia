@@ -20,7 +20,7 @@ export class Course {
   }
 
   move (module: Module, to: number): void {
-    if (to > this.modules.length || to <= 0) {
+    if (to > this.modules.length || to < 1) {
       return
     }
     const from = this.position(module)
